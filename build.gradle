@@ -7,14 +7,18 @@ apply plugin: 'application'
 repositories {
     mavenCentral()
     mavenLocal()
+    jcenter()
 }
 
 dependencies {
-    compile fileTree(dir: 'JMElib', include: '*.jar')
-
-    compile 'com.typesafe.akka:akka-actor-typed_2.13:2.6.0'
-    compile 'ch.qos.logback:logback-classic:1.2.3'
-    testCompile 'com.typesafe.akka:akka-actor-testkit-typed_2.13:2.6.0'
+//    compile fileTree(dir: 'JMElib', include: '*.jar')
+//
+//    compile 'com.typesafe.akka:akka-actor-typed_2.13:2.6.0'
+//    compile 'ch.qos.logback:logback-classic:1.2.3'
+//    testCompile 'com.typesafe.akka:akka-actor-testkit-typed_2.13:2.6.0'
+    implementation "org.jmonkeyengine:jme3-core:3.2.3-stable"
+    implementation "org.jmonkeyengine:jme3-desktop:3.2.3-stable"
+    implementation "org.jmonkeyengine:jme3-lwjgl:3.2.3-stable"
     testCompile 'junit:junit:4.12'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }
